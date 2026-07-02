@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/assets/app.css">
+    <title>{% block title %}GOV&middot;ZK{% endblock %}</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="/">GOV.ZK</a>
+      </div>
+      <div class="shoreline"></div>
+    </header>
+    <div>
+    <main>
+      {% block content %}
+      <h1>Default page template<span class="border-label">foo</span></h1>
+        <aside>
+          <p>
+            Add
+            <code>{% raw %}{% block content %}&hellip;{% block content %}{% endraw %}</code>
+            to your Nunjucks file to override this message.
+          </p>
+        </aside>
+        <article>
+        <!-- Encyclopedia Britannica 1911 -->
+        <p>
+          <em>SEAL</em>, strictly speaking the name of the common European representative
+          of that group of marine carnivorous mammals constituting the suborder
+          <i lang="la">Pinnipedia</i> of the order <i lang="la">Carnivora</i>,
+          but in a wider sense used to designate all the members of that group, except the Walrus.
+        </p>
+        <p>
+          The common seal (<i lang="la">Phoca vitulina</i>) is the typical representative
+          not only of that group (see <a href="#"><i lang="la">Carnivora</i></a>),
+          but also of the family <i lang="la">Phocidae</i> and the subfamily <i lang="la">Phocinae</i>,
+          and it is to this latter group that the present article is restricted.
+        </p>
+
+        <p>
+          Although seals swim and dive with the greatest ease,
+          often remaining as much as a quarter of an hour or more below the surface,
+          and are dependent for their sustenance entirely on living prey captured in the water,
+          all the species frequently resort to sandy beaches, rocks or ice-floes,
+          either to sleep or to bask in the sun,
+          and especially for the purpose of bringing forth their young.
+          The latter appears to be the universal habit,
+          and the young seals&mdash;of some species at least&mdash;
+          take to the water at first very reluctantly,
+          and have to be taught to swim by their parents.
+        </p>
+        </article>
+      {% endblock %}
+    </main>
+    <footer>
+      <div class="shoreline"></div>
+      {% block footer %}
+      <ul>
+        <li><a href="#">Foo</a></li>
+        <li><a href="#">Bar</a></li>
+        <li><a href="#">Baz</a></li>
+        <li>Aaa</li>
+        <li>Bbb</li>
+        <li>Ccc</li>
+      </ul>
+      {% endblock %}
+    </footer>
+  </body>
+</html>

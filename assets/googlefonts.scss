@@ -1,0 +1,22 @@
+@use "sass:string";
+
+@function url-encode-font-name($name) {
+  $result: "";
+  $remaining: $name;
+
+  $space-index: string.index($remaining, " ");
+  @while $space-index {
+    $result: $result + string.slice($remaining, 1, $space-index - 1) + "+";
+    $remaining: string.slice($remaining, $space-index + 1);
+    $space-index: string.index($remaining, " ");
+  }
+
+  @return $result + $remaining;
+}
+
+@function google-font-url($name) {
+  @return "https://fonts.googleapis.com/css2?family=#{url-encode-font-name($name)}&display=swap";
+}
+
+$font-name: 'Roboto' !default;
+@import url("#{google-font-url($font-name)}");

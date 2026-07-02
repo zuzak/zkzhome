@@ -1,0 +1,47 @@
+$breakpoint-mobile: 640px !default;
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    'heading heading'
+    'main sidebar';
+  gap: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h1 {
+  grid-area: heading;
+}
+article {
+  grid-area: main
+}
+aside {
+  grid-area: sidebar;
+}
+
+@media (max-width: $breakpoint-mobile) {
+  main {
+    grid-template-areas:
+      'sidebar'
+      'main';
+  }
+}
+
+/* use like: @include responsive-value('font-size', 48px, mobile: 32px) */
+@mixin responsive-value($property, $default, $mobile: null) {
+  #{$property}: $default;
+  @if $mobile {
+    @media (max-width: $breakpoint-mobile) {
+      #{$property}: $mobile;
+    }
+  }
+}
+
+footer ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 3rem);
+  padding-top: 1em;
+}
