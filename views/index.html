@@ -13,7 +13,7 @@
 
   <blockquote>
     <h3>The MIT License</h3>
-    {{ attribution | safe }}
+    <em>&copy; 2026 Douglas Gardner (&ldquo;zuzak&rdquo;)</em>
     <p>
       Permission is hereby granted, free of charge to any person
       obtaining a copy of this software and associated documentation
@@ -42,22 +42,17 @@
       or in connection with the Software or the use or
       other dealings in the Software.
     </strong></p>
-    </li>
   </blockquote>
   </section>
   {% if dependencies %}
   <section>
     <h2>Third-party credits</h2>
     <p>The following dependencies were used to create this website:</p>
-    {% for dep in dependencies %}
-      {% if loop.first %}
     <ul>
-      {% endif %}
+    {% for dep in dependencies %}
       <li>{{dep}}</li>
-      {% if loop.last %}
-    </ul>
-      {% endif %}
     {% endfor %}
+    </ul>
   </section>
   {% endif %}
 {% endblock %}

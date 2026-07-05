@@ -76,10 +76,11 @@ footer .footer {
 }
 footer {
   box-shadow: 0 50em 0 50em $color-shore;
+  position: relative;
     &::before {
       content: url(seal.svg);
-      position: relative;
-      right: -80%;
-      top: 80px;
+      position: absolute;
+      right: 20%;
+      top: 25px;
     }
 }

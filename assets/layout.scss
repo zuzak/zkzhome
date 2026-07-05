@@ -23,7 +23,7 @@ aside {
 
 @media (max-width: $breakpoint-mobile) {
   main {
-    grid-template-columns: 3fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
       'heading'
       'main'
