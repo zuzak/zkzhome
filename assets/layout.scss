@@ -7,18 +7,25 @@ main {
     'heading heading'
     'main sidebar';
   gap: 2rem;
-  max-width: 960px;
   margin: 0 auto;
+  padding: 2rem;
 }
-
+header .logo a , main {
+  max-width: 960px;
+}
 h1 {
   grid-area: heading;
+  margin: 0;
 }
 article {
   grid-area: main
 }
 aside {
   grid-area: sidebar;
+}
+
+section, article, aside {
+  border-top: 3px solid;
 }
 
 @media (max-width: $breakpoint-mobile) {

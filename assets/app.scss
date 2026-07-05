@@ -1,7 +1,7 @@
-$font: 'Andika'; //'Iosevka Charon'; //'Andika';
+$font: 'Pathway Extreme'; //'Iosevka Charon'; //'Andika';
 @use 'layout.scss';
 @use 'googlefonts.scss' with ( $font-name: $font ) ;
-@use 'admiralty5011.scss';
+@use 'int1.scss';
 
 $zk-font-family: $font, 'Arial', sans-serif !default;
 

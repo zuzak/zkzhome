@@ -5,13 +5,18 @@
 $color-shore: #ffd87d;
 $color-intertidal: #a0bf84;
 $color-littoral: #aadff9;
-$color-accent: #842BB1;
+//$color-accent: #842BB1;
+$color-accent: #843b68;
 
-aside { color: $color-accent; }
+aside, h1 { color: $color-accent; }
 
 body {
   color: #09496e;
   background-color: #f5fafd;
+}
+
+aside, article, section {
+  border-color: $color-accent;
 }
 
 @mixin shoreline($base-y, $jitter: 4, $steps: 18, $flip: false) {
