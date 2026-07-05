@@ -9,6 +9,10 @@ $color-accent: #842BB1;
 
 aside { color: $color-accent; }
 
+body {
+  color: #09496e;
+  background-color: #f5fafd;
+}
 
 @mixin shoreline($base-y, $jitter: 4, $steps: 18, $flip: false) {
   // random walk
