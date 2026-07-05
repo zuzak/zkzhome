@@ -1,4 +1,4 @@
-$font: 'Iosevka Charon'; //'Andika';
+$font: 'Andika'; //'Iosevka Charon'; //'Andika';
 @use 'layout.scss';
 @use 'googlefonts.scss' with ( $font-name: $font ) ;
 @use 'admiralty5011.scss';
