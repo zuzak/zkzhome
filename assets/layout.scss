@@ -1,4 +1,4 @@
-$breakpoint-mobile: 640px !default;
+$breakpoint-mobile: 720px !default;
 
 main {
   display: grid;
@@ -23,9 +23,11 @@ aside {
 
 @media (max-width: $breakpoint-mobile) {
   main {
+    grid-template-columns: 3fr;
     grid-template-areas:
-      'sidebar'
-      'main';
+      'heading'
+      'main'
+      'sidebar';
   }
 }
 
@@ -41,7 +43,10 @@ aside {
 
 footer ul {
   list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 3rem);
+  li {
+  display: inline-block;
+  padding-right: 2em;
+  }
   padding-top: 1em;
+  padding-left: 0;
 }

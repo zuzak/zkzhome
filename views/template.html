@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <link rel="stylesheet" href="/assets/app.css">
     <title>{% block title %}GOV&middot;ZK{% endblock %}</title>
@@ -11,10 +11,9 @@
       </div>
       <div class="shoreline"></div>
     </header>
-    <div>
     <main>
       {% block content %}
-      <h1>Default page template<span class="border-label">foo</span></h1>
+      <h1>Default page template</h1>
         <aside>
           <p>
             Add
@@ -23,7 +22,7 @@
           </p>
         </aside>
         <article>
-        <!-- Encyclopedia Britannica 1911 -->
+        <h2><cite>Encyclopedia Britannica 1911</cite></h2>
         <p>
           <em>SEAL</em>, strictly speaking the name of the common European representative
           of that group of marine carnivorous mammals constituting the suborder
@@ -55,14 +54,17 @@
     <footer>
       <div class="shoreline"></div>
       {% block footer %}
-      <ul>
-        <li><a href="#">Foo</a></li>
-        <li><a href="#">Bar</a></li>
-        <li><a href="#">Baz</a></li>
-        <li>Aaa</li>
-        <li>Bbb</li>
-        <li>Ccc</li>
-      </ul>
+      <div class="footer">
+        <nav>
+          <ul>
+            <li><a href="/about">About this website</a></li>
+            <li><a href="#">Bar</a></li>
+            <li><a href="#">Baz</a></li>
+          </ul>
+        </nav>
+        All content is available under the
+        <a href="https://creativecommons.org/licenses/by/4.0/">&#127341;&#127343;&nbsp;Creative&nbsp;Commons Attribution Licence 4.0</a>
+      </div>
       {% endblock %}
     </footer>
   </body>

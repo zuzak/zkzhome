@@ -1,4 +1,4 @@
-$font: 'Cabin';
+$font: 'Iosevka Charon'; //'Andika';
 @use 'layout.scss';
 @use 'googlefonts.scss' with ( $font-name: $font ) ;
 @use 'admiralty5011.scss';
@@ -14,7 +14,7 @@ body { margin: 0; }
 main { margin: 2em; }
 
 p {
-  max-width: 80ch;
+  max-width: 80ch; // WCAG AAA
 }
 
 header .logo {
@@ -38,4 +38,8 @@ header .logo {
       text-decoration: underline;
     }
   }
+}
+
+blockquote {
+  font-size: 0.7em;
 }
