@@ -1,12 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-const packagejson = require('../package.json')
-
-router.get('/about', async (req, res) => {
-    res.render('index.html', {
-        dependencies: Object.keys(packagejson.dependencies)
-    })
-})
+router.get('/', async (req, res) => res.render('index.html'))
 
 module.exports = router
