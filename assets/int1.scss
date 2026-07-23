@@ -2,17 +2,26 @@
 @use "sass:list";
 
 //
-$color-shore: #ffd87d;
-$color-intertidal: #a0bf84;
-$color-littoral: #aadff9;
-//$color-accent: #842BB1;
-$color-accent: #843b68;
+$color-shore: /* #ffd87d;  */ light-dark(#c9b97a, #867b51);
+$color-coastline: black; // light-dark(#525a5c, #a3b4b7);
+$color-land-feature: $color-coastline; //light-dark(#8b661f, #e5a833);
+$color-intertidal: light-dark(#a0bf84, #41715f);
+$color-littoral: light-dark(#98c5f2, #3f5265);
+$color-chart-magenta: light-dark(#c545c3, #ddadf4);
+$color-accent: $color-chart-magenta; //#843b68;
+$color-deep: light-dark(#d4eaee, #070707);
+$color-text: light-dark(#070707, #a3b4b7);
+$color-depmd: light-dark(#bad5e1, #262b2e);
+
+:root {
+  color-scheme: light dark;
+ }
 
 aside, h1 { color: $color-accent; }
 
 body {
-  color: #09496e;
-  background-color: #f5fafd;
+  color: $color-text;
+  background-color: $color-deep;
 }
 
 aside, article, section {
@@ -33,7 +42,7 @@ aside, article, section {
 }
 
 header .logo {
-  color: black;
+  color: $color-land-feature;
 
   border-bottom: 2px solid black;
 
@@ -46,7 +55,7 @@ header .shoreline, footer .shoreline {
   height: 3em;
 
   position: relative;
-  background: #d3eefc; // TODO tint
+  background: $color-depmd; // TODO tint
   z-index: -3;
 
   &::before, &::after {
@@ -81,7 +90,8 @@ footer .footer {
   padding: 1em;
   min-height: 3em;
   background-color: $color-shore;
-  border-top: 2px solid black;
+  border-top: 2px solid $color-coastline;
+  color: $color-land-feature;
 }
 footer {
   box-shadow: 0 50em 0 50em $color-shore;
