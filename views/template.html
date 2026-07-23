@@ -1,7 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
+    {% block css %}
     <link rel="stylesheet" href="/assets/app.css">
+    {% endblock %}
     <title>{% block title %}GOV&middot;ZK{% endblock %}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,7 +21,7 @@
         <aside>
           <p>
             Add
-            <code>{% raw %}{% block content %}&hellip;{% block content %}{% endraw %}</code>
+            <code>{% raw %}{%&nbsp;block&nbsp;content&nbsp;%}&ZeroWidthSpace;&hellip;&ZeroWidthSpace;{%&nbsp;block&nbsp;content&nbsp;%}{% endraw %}</code>
             to your Nunjucks file to override this message.
           </p>
         </aside>

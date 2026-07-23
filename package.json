@@ -16,7 +16,7 @@
   "scripts": {
     "start": "node server.js",
     "watch": "node --watch --watch-path=./views --watch-path=./routes server.js | pino-dev",
-    "build:css": "sass assets/app.scss assets/app.css --pkg-importer=node",
-    "watch:css": "sass --watch assets/app.scss assets/app.css"
+    "build:css": "sass assets --pkg-importer=node",
+    "watch:css": "sass --watch assets"
   }
 }

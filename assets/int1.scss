@@ -44,11 +44,8 @@ aside, article, section {
 header .logo {
   color: $color-land-feature;
 
-  border-bottom: 2px solid black;
-
-}
-
-header .logo {
+  border-bottom: 2px solid $color-coastline;
+  box-shadow: 50em 0em 50 0em $color-shore;
   background: $color-shore;
 }
 header .shoreline, footer .shoreline {
