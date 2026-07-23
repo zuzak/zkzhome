@@ -1,0 +1,47 @@
+.discord-memberlist {
+  li::after {
+    font-weight: 200;
+    font-size: 70%;
+  }
+  li.discord-online {
+    list-style: disc;
+    &::marker {
+      color: green;
+    }
+    &::after {
+      content: " is online";
+    }
+  }
+  li.discord-idle{
+    list-style: circle;
+    &::marker {
+      color: yellow;
+    }
+    &::after {
+      content: " is idle";
+    }
+  }
+  li.discord-dnd {
+    list-style: square;
+    &::marker {
+      color: red;
+    }
+    &::after {
+      content: " is busy";
+    }
+  }
+}
+
+ul.game-grid {
+  display: grid;
+ grid-template-columns: repeat(auto-fill, 231px);
+ gap: 0.5em;
+ padding-left: 0;
+ justify-content: center;
+  li {
+    img { display: block; }
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
